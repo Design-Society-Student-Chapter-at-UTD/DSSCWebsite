@@ -1,6 +1,7 @@
 # Python bytecode files
 __pycache__/
 *.py[cod]
+pyvenv.cfg
 
 # Virtual environment directories
 venv/
