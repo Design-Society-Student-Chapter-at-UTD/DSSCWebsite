@@ -1,24 +1,22 @@
-from flask import Flask
+from flask import Flask, jsonify
 import psycopg2
 import sys
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
-# Database connection parameters
-DB_NAME = "your_database_name"
-DB_USER = "your_username"
-DB_PASSWORD = "your_password"
-DB_HOST = "localhost"
-DB_PORT = "5432"
-
 def connect_db():
-    return psycopg2.connect(
-        dbname=DB_NAME,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        host=DB_HOST,
-        port=DB_PORT
+    conn = psycopg2.connect(
+        dbname=os.getenv('DB_NAME'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        host=os.getenv('DB_HOST'),
+        port=os.getenv('DB_PORT')
     )
+    return conn
 
 def create_table():
     conn = connect_db()
@@ -46,6 +44,31 @@ def insert_data(name, class_standing):
 @app.route('/')
 def hello():
     return "Hello! Use the terminal to input data."
+
+@app.route('/users')
+def get_users():
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("SELECT id, username, email FROM users;")
+    users = cursor.fetchall()
+    
+    cursor.close()
+    conn.close()
+
+    return jsonify([{'id': user[0], 'username': user[1], 'email': user[2]} for user in users])
+
+@app.route('/add_user/<username>/<email>')
+def add_user(username, email):
+    conn = connect_db()
+    cursor = conn.cursor()
+    
+    cursor.execute("INSERT INTO users (username, email) VALUES (%s, %s);", (username, email))
+    conn.commit()
+    
+    cursor.close()
+    conn.close()
+
+    return f"User {username} added successfully!"
 
 if __name__ == '__main__':
     create_table()
