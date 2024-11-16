@@ -17,9 +17,4 @@ Setup for flask server
 * pip install flask psycopg2-binary
 * pip install flask python-dotenv
 * Create .env file (fill out DB_USER on your own; change the quotes):
-  * DB_USER=”your_username”
-  * DB_PASSWORD=”Dssc123
-  * DB_HOST=”10.173.178.12”
-  * DB_PORT=”5432”
-  * DB_NAME=”postgres”
 *Run “python app.py input” to test 
