@@ -1,18 +1,18 @@
 from flask import Flask
-import psycopg2
+import psycopg
 import sys
 
 app = Flask(__name__)
 
 # Database connection parameters
-DB_NAME = "your_database_name"
-DB_USER = "your_username"
-DB_PASSWORD = "your_password"
+DB_NAME = "postgres"
+DB_USER = "postgres"
+DB_PASSWORD = "Chandigarh 2016"
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
 def connect_db():
-    return psycopg2.connect(
+    return psycopg.connect(
         dbname=DB_NAME,
         user=DB_USER,
         password=DB_PASSWORD,
