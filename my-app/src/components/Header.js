@@ -1,8 +1,9 @@
 // src/components/Header.js
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { colors, fonts } from '../theme';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { colors, fonts } from "../theme";
+import Logo from "../images/logo.png";
 
 const Nav = styled.nav`
   background-color: ${colors.primary};
@@ -23,15 +24,24 @@ const NavLink = styled(Link)`
   }
 `;
 
+const LogoImage = styled.img`
+  height: 40px;
+`;
+
 const Header = () => {
   return (
     <Nav>
-      <NavLink to="/">DSSC</NavLink>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <LogoImage src={Logo} alt="Website Logo" />
+        <NavLink to="/">DSSC</NavLink>
+      </div>
       <div>
-        <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/events">Events</NavLink>
-        <NavLink to="/membership">Membership</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
+        <NavLink to="/AboutUs">About Us</NavLink>
+        <NavLink to="/Events">Events</NavLink>
+        <NavLink to="/Membership">Membership</NavLink>
+        <NavLink to="/Gallery">Gallery</NavLink>
+        <NavLink to="/Resources">Resources</NavLink>
+        <NavLink to="/Sign up">Sign up</NavLink>
       </div>
     </Nav>
   );

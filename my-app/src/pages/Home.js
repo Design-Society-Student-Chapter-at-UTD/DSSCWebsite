@@ -1,7 +1,7 @@
 // src/pages/Home.js
-import React from 'react';
-import styled from 'styled-components';
-import { colors, fonts } from '../theme';
+import React from "react";
+import styled from "styled-components";
+import { colors, fonts } from "../theme";
 
 const HeroSection = styled.section`
   background-color: ${colors.lightGray};
@@ -39,7 +39,8 @@ const Home = () => {
     <HeroSection>
       <HeroImage src="/images/hero.jpg" alt="Design Image" />
       <Introduction>
-        Welcome to the Design Students' Social Club (DSSC). We foster creativity and collaboration among design enthusiasts.
+        Welcome to Design Society Student Chapter (DSSC). We foster creativity
+        and collaboration among design enthusiasts.
       </Introduction>
       <SectionsContainer>
         <SectionCard>
@@ -55,8 +56,14 @@ const Home = () => {
           <p>Join us and be part of our vibrant community.</p>
         </SectionCard>
         <SectionCard>
-          <h3>Contact</h3>
-          <p>Get in touch with us for any inquiries.</p>
+          <h3>Gallery</h3>
+          <p>
+            Get inspired by seeing winning projects from our design challenge.
+          </p>
+        </SectionCard>
+        <SectionCard>
+          <h3>Resources</h3>
+          <p>Learn more by viewing recommended resources.</p>
         </SectionCard>
       </SectionsContainer>
     </HeroSection>
