@@ -2,6 +2,7 @@ import React from "react";
 import HandsOnEvent from "../assets/HandsOnEvent.png";
 import SocialEvent from "../assets/SocialEvent.png";
 import WorkshopEvent from "../assets/WorkshopEvent.png";
+import DesignerDesk from "../assets/DesignerDesk.png";
 
 const Membership = () => {
   return (
@@ -10,72 +11,78 @@ const Membership = () => {
         MEMBERSHIP
       </div>
 
-      <div className="m-6">
-        <div className="bg-[#ADCED5] p-4 rounded-2xl">
-          <div className="grid md:grid-cols-2 gap-6 min-h-full">
-            <div className="md:col-span-1 m-4">
-              <div className=" bg-[#336274] p-4 rounded-2xl text-2xl text-white font-bold">
-                (Catchy Line)
-              </div>
-              <div className="rounded-2xl ml-1 mt-4 text-md text-black">
-                Pay a yearly fee of $5 to earn a variety of
-              </div>
-              <div className="rounded-2xl ml-1 text-md text-black font-bold">
-                exclusive perks!
-              </div>
-              <button className=" bg-[#E39775] mt-4 w-60 p-2 rounded-2xl text-md text-black">
-                Become a Member
-              </button>
-            </div>
-            <div className="md:col-span-1  m-4 "></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-[#ADCED5] rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mb-12">
+          <div className="mb-6 md:mb-0">
+            <h1 className="bg-[#336274] rounded-2xl text-2xl sm:px-6 lg:px-8 py-3 md:text-3xl font-bold text-white mb-3">
+              (Catchy Line)
+            </h1>
+            <p className="text-lg text-slate-700">
+              Pay a yearly fee of <span className="font-semibold">$5</span> to
+              earn a variety of
+              <span className="font-semibold"> exclusive perks!</span>
+            </p>
+            <button className="styled-button mt-4">Become a Member</button>
+          </div>
+          <div className="w-full md:w-1/3">
+            <img
+              src={DesignerDesk}
+              alt="Designer Desk"
+              className="w-full h-auto"
+            />
           </div>
         </div>
-      </div>
-      <div className=" bg-[#336274] p-3 mt-10 ml-40 mr-40 rounded-2xl text-center text-2xl text-white">
-        Why get a membership?
-      </div>
-      <div className="h-full mb-4 flex flex-col space-y-20">
-        <div className="grid md:grid-cols-3 gap-6 min-h-full">
-          <div className="md:col-span-1  p-4">
-            <img
-              src={HandsOnEvent}
-              alt="Hands-on Event"
-              className="w-auto m-2 "
-            />
-            <div className="rounded-2xl text-center ml-1 text-lg text-black font-bold">
-              Hands-on Activites
-            </div>
-            <div className="rounded-2xl text-center ml-1 text-md text-black">
-              Description lorem ipsum eisumod tempor.
-            </div>
-          </div>
 
-          <div className="md:col-span-1  p-4">
-            <img src={SocialEvent} alt="Social Event" className="w-auto m-2" />
-            <div className="rounded-2xl text-center ml-1 text-lg text-black font-bold">
-              Socials
+        <div>
+          <h2 className="bg-[#336274] rounded-2xl text-2xl text-center sm:px-6 lg:px-8 py-3 md:text-3xl font-bold text-white mb-3">
+            Why get a membership?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src={HandsOnEvent}
+                alt="Hands-on Activities"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2">
+                  Hands-on Activities
+                </h3>
+                <p className="text-slate-600">
+                  Description lorem ipsum eisumod tempor.
+                </p>
+              </div>
             </div>
-            <div className="rounded-2xl text-center ml-1 text-md text-black">
-              Description lorem ipsum eisumod tempor.
-            </div>
-            <button className=" bg-[#E39775] shadow-lg text-center mt-4 w-60 p-2 rounded-2xl text-md text-black">
-              Become a Member
-            </button>
-          </div>
 
-          <div className="md:col-span-1  p-4">
-            <img
-              src={WorkshopEvent}
-              alt="Workshop Event"
-              className="w-auto m-2"
-            />
-            <div className="rounded-2xl text-center ml-1 text-lg text-black font-bold">
-              Workshops
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src={SocialEvent}
+                alt="Socials"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2">Socials</h3>
+                <p className="text-slate-600">
+                  Description lorem ipsum eisumod tempor.
+                </p>
+              </div>
             </div>
-            <div className="rounded-2xl text-center ml-1 text-md text-black">
-              Handpicked workshops targeted towards members.
+
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <img
+                src={WorkshopEvent}
+                alt="Workshops"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-lg mb-2">Workshops</h3>
+                <p className="text-slate-600">
+                  Handpicked workshops targeted towards members.
+                </p>
+              </div>
             </div>
           </div>
+          {/* <button className="styled-button mt-4">Become a Member</button> */}
         </div>
       </div>
     </div>
