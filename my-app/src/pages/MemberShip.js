@@ -11,7 +11,7 @@ const Membership = () => {
         MEMBERSHIP
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-[#ADCED5] rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="mb-6 md:mb-0">
             <h1 className="bg-[#336274] rounded-2xl text-2xl sm:px-6 lg:px-8 py-3 md:text-3xl font-bold text-white mb-3">
@@ -82,7 +82,6 @@ const Membership = () => {
               </div>
             </div>
           </div>
-          {/* <button className="styled-button mt-4">Become a Member</button> */}
         </div>
       </div>
     </div>

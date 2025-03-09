@@ -82,18 +82,18 @@ const Gallery = () => {
         GALLERY
       </div>
 
-      <div className="w-3/4 mx-auto pt-12 pb-16">
+      <div className="w-3/4 mx-auto pt-12">
         <Slider {...settings}>
           {designChallengeWinners.map((project, index) => (
             <div key={index}>
               <div className="bg-[#d9d9d9] border border-indigo p-4 rounded-xl shadow-md text-center relative h-[400px]">
-                <div className="text-black text-xl font-normal text-left font-['Inter'] absolute top-4 left-4">
+                <div className="text-black text-xl font-normal text-left absolute top-4 left-4">
                   Design Challenge {project.year}
                 </div>
-                <div className="text-black text-4xl font-normal font-['Inter'] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <div className="text-black text-4xl font-normal absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   {project.title}
                 </div>
-                <div className="text-black text-xl font-normal text-right font-['Inter'] absolute bottom-4 right-4">
+                <div className="text-black text-xl font-normal text-right absolute bottom-4 right-4">
                   {project.studentName}
                 </div>
               </div>
@@ -102,12 +102,10 @@ const Gallery = () => {
         </Slider>
       </div>
 
-      <div className="pt-15 mt-16 bg-[#5c9eac]/50 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] border-black">
+      <div className="pt-15 mt-16 bg-[#5c9eac]/50 shadow-md border-black">
         <div className="flex justify-center items-center w-full">
-          <div className="m-12 w-full max-w-[900px] h-[93px] bg-[#336274] rounded-[40px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] flex items-center justify-center">
-            <div className="text-center text-white text-[64px] font-bold font-['Inter']">
-              Student Work Showcase
-            </div>
+          <div className=" bg-[#336274] shadow-md rounded-2xl text-center sm:px-6 lg:px-8 py-3  text-white text-5xl font-bold m-12">
+            Student Work Showcase
           </div>
         </div>
         <div className="relative w-3/4 mx-auto pb-16">
@@ -117,14 +115,12 @@ const Gallery = () => {
                 key={index}
                 className="grid grid-cols-2 gap-4 items-center p-6 bg-[#d9d9d9] rounded-xl shadow-md"
               >
-                {/* Left Image Box */}
                 <div className="h-[200px] bg-gray-300 rounded-lg flex items-center justify-center">
                   <span className="text-gray-500 text-lg">
                     Image Placeholder
                   </span>
                 </div>
 
-                {/* Right Content */}
                 <div className="flex flex-col space-y-4">
                   <div className="p-4 bg-white rounded-lg shadow border border-gray-300">
                     <span className="text-black text-xl font-semibold">
