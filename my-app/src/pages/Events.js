@@ -18,7 +18,7 @@ const Events = () => {
 
   return (
     <div>
-      <div className="bg-orange my-4 p-4 w-1/6 rounded-md">
+      <div className="bg-orange my-4 p-4 w-1/6 rounded-r-lg">
         <h2 className="font-bold text-3xl text-center text-white">EVENTS</h2>
       </div>
       <div className="flex flex-col justify-center items-center min-h-[100px] my-10">
@@ -27,12 +27,16 @@ const Events = () => {
             Calendar
           </h2>
         </div>
-        <div className="mt-4 flex flex-col justify-center items-center">
-          <img
-            src={Calendar}
-            alt="Calendar temp placeholder"
-            className="w-96 h-auto"
-          />
+        <div className="w-4/6 h-96 mt-10 overflow-hidden rounded-lg shadow-md">
+        <iframe
+                title="Google Calendar"
+                src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=dG1hMjMwMDAyQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=a3FvczAyZ2wwbjZ0MWx0dnMxaXBvbnVrZmpxcWo3azBAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043&color=%23be0300"
+                style={{ border: 0 }}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                scrolling="no"
+            ></iframe> 
         </div>
       </div>
       <div className="my-10 bg-[#5c9eac]/50 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] border-black rounded-lg">
@@ -106,7 +110,7 @@ const Events = () => {
           }
           .slick-next {
             right: 60px;
-            z-index: 2;
+            z-index: 5;
           }
           .slick-prev:before,
           .slick-next:before {
