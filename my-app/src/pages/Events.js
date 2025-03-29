@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Calendar from "../assets/Calendar.png";
+import CalendarComponent from "./Events/CalendarComponent";
 
 const Events = () => {
   const settings = {
@@ -17,31 +18,24 @@ const Events = () => {
   };
 
   return (
-    <div>
-      <div className="bg-orange my-4 p-4 w-1/6 rounded-md">
-        <h2 className="font-bold text-3xl text-center text-white">EVENTS</h2>
+    <div className="mt-5">
+      <div className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
+        EVENTS
       </div>
       <div className="flex flex-col justify-center items-center min-h-[100px] my-10">
-        <div className="bg-blue p-4 w-1/4 rounded-xl shadow-md">
-          <h2 className="text-center text-3xl font-bold text-white">
-            Calendar
-          </h2>
-        </div>
-        <div className="mt-4 flex flex-col justify-center items-center">
-          <img
-            src={Calendar}
-            alt="Calendar temp placeholder"
-            className="w-96 h-auto"
-          />
+        <h2 className="bg-blue px-4 py-2 w-1/4 rounded-md shadow-md text-center text-2xl font-bold scale-125 text-white">
+          Calendar
+        </h2>
+        {/* Calendar Section */}
+        <div className="mt-6 mb-10 w-3/4">
+          <CalendarComponent />
         </div>
       </div>
       <div className="my-10 bg-[#5c9eac]/50 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] border-black rounded-lg">
         <div className="flex justify-center items-center min-h-[80px] pt-8">
-          <div className="bg-blue p-4 w-1/4 rounded-xl shadow-md">
-            <h2 className="text-center text-3xl font-bold text-white">
-              Upcoming Events
-            </h2>
-          </div>
+          <h2 className="bg-blue px-4 py-2 w-1/4 rounded-md shadow-md text-center text-2xl font-bold scale-125 text-white">
+            Upcoming Events
+          </h2>
         </div>
         <div className="pl-32 h-96 pt-10">
           <Slider {...settings}>
@@ -116,11 +110,9 @@ const Events = () => {
         `}</style>
       </div>
       <div className="flex justify-center items-center min-h-[100px] my-8">
-        <div className="bg-blue p-4 w-1/4 rounded-xl shadow-md">
-          <h2 className="text-center text-3xl font-bold text-white">
-            Past Events
-          </h2>
-        </div>
+        <h2 className="bg-blue px-4 py-2 w-1/4 rounded-md shadow-md text-center text-2xl font-bold scale-125 text-white">
+          Past Events
+        </h2>
       </div>
       <div className="flex flex-col ps-44 gap-6">
         <div className="flex items-center gap-4">
@@ -133,8 +125,7 @@ const Events = () => {
           <p className="text-sm text-left -ml-32">
             This is a short description of the past event. Lorem ipsum dolor sit
             amet, consectetur adipiscing elit.
-            <p> Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </p>
         </div>
         <div className="flex items-center gap-4">
@@ -147,8 +138,7 @@ const Events = () => {
           <p className="text-sm text-left -ml-32">
             This is a short description of the past event. Lorem ipsum dolor sit
             amet, consectetur adipiscing elit.
-            <p> Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </p>
         </div>
         <div className="flex items-center gap-4 pb-10">
@@ -161,8 +151,7 @@ const Events = () => {
           <p className="text-sm text-left -ml-32">
             This is a short description of the past event. Lorem ipsum dolor sit
             amet, consectetur adipiscing elit.
-            <p> Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </p>
         </div>
       </div>
