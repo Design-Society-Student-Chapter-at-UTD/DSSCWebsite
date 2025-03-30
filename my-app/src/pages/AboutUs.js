@@ -12,7 +12,7 @@ const AboutUs = () => {
           transition={{ duration: 0.5 }}
           className="flex justify-start"
         >
-          <div className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
+          <div className="text-left bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
             ABOUT US
           </div>
         </motion.div>
@@ -270,7 +270,7 @@ const AboutUs = () => {
               </p>
             </div>
             {/* Arrow Symbol */}
-            <div className="text-4xl mx-4 ">→</div>{" "}
+            <div className="text-4xl mx-4 ">â†’</div>{" "}
             {/* You can replace this with an SVG if needed */}
             {/* Goals Section */}
             <div className="text-center ml-8 max-w-[400px]">
