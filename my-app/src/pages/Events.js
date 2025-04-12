@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Calendar from "../assets/Calendar.png";
-
+import {motion} from "framer-motion";
 const Events = () => {
   const settings = {
     dots: true,
@@ -18,9 +18,18 @@ const Events = () => {
 
   return (
     <div>
-      <div className="bg-orange my-4 p-4 w-1/6 rounded-r-lg">
+      <motion.div 
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }} 
+      className="bg-orange my-4 p-4 w-1/6 rounded-r-lg">
         <h2 className="font-bold text-3xl text-center text-white">EVENTS</h2>
-      </div>
+      </motion.div>
+      <motion.div
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }} 
+      >
       <div className="flex flex-col justify-center items-center min-h-[100px] my-10">
         <div className="bg-blue p-4 w-1/4 rounded-xl shadow-md">
           <h2 className="text-center text-3xl font-bold text-white">
@@ -170,6 +179,7 @@ const Events = () => {
           </p>
         </div>
       </div>
+      </motion.div>
     </div>
   );
 };

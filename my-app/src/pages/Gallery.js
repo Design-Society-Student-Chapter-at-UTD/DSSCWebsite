@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import {motion} from "framer-motion";
 const Gallery = () => {
   const winnerSliderRef = useRef(null);
 
@@ -78,11 +78,19 @@ const Gallery = () => {
 
   return (
     <div className="mt-5 flex flex-col">
-      <div className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
+      <motion.div 
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }} 
+      className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
         GALLERY
-      </div>
+      </motion.div>
 
-      <div className="w-3/4 mx-auto pt-12">
+      <motion.div 
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }} 
+      className="w-3/4 mx-auto pt-12">
         <Slider {...settings}>
           {designChallengeWinners.map((project, index) => (
             <div key={index}>
@@ -100,7 +108,7 @@ const Gallery = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </motion.div>
 
       <div className="pt-15 mt-16 bg-[#5c9eac]/50 shadow-md border-black">
         <div className="flex justify-center items-center w-full">
