@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgPhoto from "../assets/bgPhoto.jpg";
 const AboutUs = () => {
   return (
     <>
