@@ -112,7 +112,7 @@ const Gallery = () => {
 
       <div className="pt-15 mt-16 bg-[#5c9eac]/50 shadow-md border-black">
         <div className="flex justify-center items-center w-full">
-          <div className=" bg-[#336274] shadow-md rounded-2xl text-center sm:px-6 lg:px-8 py-3  text-white text-5xl font-bold m-12">
+          <div className=" bg-[#336274] shadow-md rounded-2xl text-center sm:px-6 lg:px-8 py-3  text-white text-4xl font-bold m-12">
             Student Work Showcase
           </div>
         </div>
