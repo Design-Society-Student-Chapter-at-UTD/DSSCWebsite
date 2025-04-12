@@ -3,15 +3,23 @@ import HandsOnEvent from "../assets/HandsOnEvent.png";
 import SocialEvent from "../assets/SocialEvent.png";
 import WorkshopEvent from "../assets/WorkshopEvent.png";
 import DesignerDesk from "../assets/DesignerDesk.png";
-
+import {motion} from "framer-motion";
 const Membership = () => {
   return (
     <div className="mt-5">
-      <div className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
+      <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }} 
+       className="bg-[#e8a087] w-80 rounded-r-2xl pl-8 p-4 text-2xl text-white font-bold">
         MEMBERSHIP
-      </div>
+      </motion.div>
 
-      <div className="w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }} 
+      className="w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-[#ADCED5] rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mb-12">
           <div className="mb-6 md:mb-0">
             <h1 className="bg-[#336274] rounded-2xl text-2xl sm:px-6 lg:px-8 py-3 md:text-3xl font-bold text-white mb-3">
@@ -83,7 +91,7 @@ const Membership = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
